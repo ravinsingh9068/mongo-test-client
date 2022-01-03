@@ -1,0 +1,12 @@
+com\xlrs\ft\user\service\UserService.class
+com\xlrs\ft\user\controller\MongoController.class
+com\xlrs\ft\user\Application.class
+com\xlrs\ft\user\repository\MongoDBService.class
+com\xlrs\ft\user\cofig\WebSecurityConfig.class
+com\xlrs\ft\user\repository\UserRepository.class
+com\xlrs\ft\user\view\CreateUserResponse.class
+com\xlrs\ft\user\cofig\MongoTestClient.class
+com\xlrs\ft\user\mongo\MongoDBClient.class
+com\xlrs\ft\user\view\UserView.class
+com\xlrs\ft\user\cofig\SSLConfig.class
+com\xlrs\ft\user\entity\Users.class

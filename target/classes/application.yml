@@ -1,0 +1,54 @@
+server:
+  port: 4006
+
+spring:
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  application:
+    name: mongo-test-client
+                   
+  datasource:
+    url: jdbc:postgresql://xlrs-postgresql.cgutzdhdznex.ap-southeast-2.rds.amazonaws.com:5432/xlrsbanktransaction
+    username: xlrspostgresusr
+    password: masterpass123
+    platform: postgres
+    
+  jpa:
+    show-sql: true
+    database: POSTGRESQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        temp:
+          use_jdbc_metadata_defaults: false
+        formatSql: true
+        jdbc:
+          lob:
+            non-contextual-creation: true
+    hibernate:
+      # Hibernate ddl auto (create, create-drop, validate, update)
+      ddl-auto: update
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:  "*"
+  endpoint:
+    health:
+      show-details: always
+    loggers:
+      enabled:  true
+
+
+logging:
+  file:
+    name: mongo-test-client.log
+  level:
+    org.springframework.web: INFO
+    com.xlrs: DEBUG
+    org.hibernate: DEBUG
+
+ribbon:
+  ServerListRefreshInterval: 1000
